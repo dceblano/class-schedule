@@ -68,7 +68,7 @@ public class ScheduleController {
 	public ScheduleDto addNewSchedule(@PathVariable Long campusId, @PathVariable Long roomId,
 			@RequestBody ScheduleDto dto) {
 
-		dto.setCampusId(campusId);
+		dto.setCampusId(campusId); 
 		dto.setRoomId(roomId);
 		Schedule schedule = convertToObject(dto);
 		schedule = scheduleService.saveSchedule(schedule);
